@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1C29" />
+      <stop offset="50%" stop-color="#2D3B68" />
+      <stop offset="100%" stop-color="#4285F4" />
+    </linearGradient>
+    <linearGradient id="androidGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#26A69A" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background with rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Outer glowing accent ring -->
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#3DDC84" stroke-width="8" opacity="0.8" filter="url(#glow)" />
+  <circle cx="256" cy="256" r="145" fill="url(#androidGreen)" />
+  
+  <!-- Android Antennae -->
+  <line x1="210" y1="130" x2="175" y2="85" stroke="#3DDC84" stroke-width="12" stroke-linecap="round" />
+  <line x1="302" y1="130" x2="337" y2="85" stroke="#3DDC84" stroke-width="12" stroke-linecap="round" />
+  <circle cx="170" cy="80" r="10" fill="#3DDC84" />
+  <circle cx="342" cy="80" r="10" fill="#3DDC84" />
+
+  <!-- Tutor Graduation Cap / Hat on top -->
+  <path d="M 256 150 L 370 195 L 256 240 L 142 195 Z" fill="#FFFFFF" opacity="0.95" />
+  <path d="M 350 205 L 350 245 L 340 250 L 340 209 Z" fill="#FFD54F" />
+
+  <!-- Expressive Eyes -->
+  <circle cx="215" cy="265" r="20" fill="#1A1C29" />
+  <circle cx="297" cy="265" r="20" fill="#1A1C29" />
+  <circle cx="220" cy="260" r="6" fill="#FFFFFF" />
+  <circle cx="302" cy="260" r="6" fill="#FFFFFF" />
+
+  <!-- Friendly Smile -->
+  <path d="M 215 315 Q 256 355 297 315" fill="none" stroke="#1A1C29" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Soundwaves / Speech Indicator for Live Voice -->
+  <path d="M 90 256 Q 70 210 90 170" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.6" />
+  <path d="M 70 270 Q 45 210 70 150" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+  <path d="M 422 256 Q 442 210 422 170" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.6" />
+  <path d="M 442 270 Q 467 210 442 150" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+</svg>
