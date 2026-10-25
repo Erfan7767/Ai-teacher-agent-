@@ -93,7 +93,7 @@ export default function DebugModal() {
     const ai = new GoogleGenAI({ apiKey: API_KEY });
     setIsCorrectingTranscript(true);
     setCorrectedTranscript('Generating summary...');
-    const model = 'gemini-2.5-flash';
+    const model = 'gemini-3.8-flash';
     const TIMEOUT_SECONDS = 20;
 
     try {

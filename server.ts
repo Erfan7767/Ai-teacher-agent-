@@ -11,20 +11,23 @@ import { GoogleGenAI } from "@google/genai";
 import { WebSocketServer, WebSocket } from "ws";
 
 const MODEL_UPGRADES: Record<string, string> = {
-  "gemini-2.5-flash": "gemini-3-flash-preview",
-  "gemini-2.5-pro": "gemini-3.1-pro-preview",
-  "gemini-3-pro-preview": "gemini-3.1-pro-preview",
-  "gemini-2.0-flash": "gemini-3-flash-preview",
-  "gemini-2.0-flash-exp": "gemini-3-flash-preview",
-  "gemini-3.5-flash": "gemini-2.5-flash-lite",
-  "gemini-2.5-flash-preview-native-audio-dialog": "gemini-2.5-flash-native-audio-preview-12-2025",
-  "gemini-2.5-flash-exp-native-audio-thinking-dialog": "gemini-2.5-flash-native-audio-preview-12-2025",
+  "gemini-2.5-flash": "gemini-3.8-flash",
+  "gemini-2.5-pro": "gemini-4-argon",
+  "gemini-3-pro-preview": "gemini-4-argon",
+  "gemini-2.0-flash": "gemini-3.8-flash",
+  "gemini-2.0-flash-exp": "gemini-3.8-flash",
+  "gemini-3.5-flash": "gemini-3.1-flash-lite",
+  "gemini-2.5-flash-preview-native-audio-dialog": "gemini-3.8-live",
+  "gemini-2.5-flash-exp-native-audio-thinking-dialog": "gemini-3.8-live",
+  "gemini-2.5-flash-native-audio-preview-09-2025": "gemini-3.8-live",
+  "gemini-2.5-flash-native-audio-preview-12-2025": "gemini-3.8-live",
 };
 
 function resolveModel(model?: string): string {
-  if (!model) return "gemini-3-flash-preview";
+  if (!model) return "gemini-3.8-live";
   return MODEL_UPGRADES[model] || model;
 }
+
 
 function serializeGenerateContentResponse(r: any) {
   return {
